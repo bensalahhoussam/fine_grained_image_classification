@@ -17,5 +17,13 @@ The aim of this challenge is to build a Generalised Model for the task of Image 
 
 ## Exprimenting with Loss Functions
 
+| model | score|
+| --- | --- |
+| `ResNET-50 with Cross Entropy` | 0.8825 |
+| `ResNET-50 with Focal Loss`` | 0.892 |
+| `ResNET-50 with Label Smoothing` | 0.9 |
+| `ResNET-50 with Focal Loss + Label Smoothing` | 0.924|
+
 ## References 
 Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889
+https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06
