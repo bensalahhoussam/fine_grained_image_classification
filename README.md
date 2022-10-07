@@ -7,5 +7,15 @@ Bilinear CNN’s are simple parallel CNN’s which are combined using matrix out
 
 
 ![1_gr4snhggh9jV1F3mnHeErg](https://user-images.githubusercontent.com/112108580/194578146-f646b290-a318-4d84-abfe-ca3581194998.png)
+
+
+## Problem Objectives:
+The aim of this challenge is to build a Generalised Model for the task of Image Classification. We have to also deal with Class Imbalance Problem and detect Fine Grained details which differentiates whether the leaf is diseased or Not.
+
+![Screenshot 2022-10-07 161109](https://user-images.githubusercontent.com/112108580/194587792-8a2420b8-2276-4ef1-9072-a355e04c4c0b.png)
+
+
+## Exprimenting with Loss Functions
+
 ## References 
 Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889
