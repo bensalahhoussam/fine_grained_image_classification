@@ -10,7 +10,8 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.utils import to_categorical
 from fine_grained_data_preparation import load_data
 from keras.preprocessing.image import ImageDataGenerator
-
+from metrics import f1_score
+from loss_function import ategorical_focal_loss_with_label_smoothing
 x_train, y_train = load_data("train")
 x_valid, y_valid = load_data("valid")
 
@@ -27,35 +28,7 @@ def train_generator(x,y):
 def valid_generator(x,y):
     train = tf.data.Dataset.from_tensor_slices((x, y)).map(data).shuffle(1000).batch(32)
     return train
-def categorical_focal_loss_with_label_smoothing(alpha, factor,gamma):
-    def focal_loss(y_actual, y_output):
-        epsilion = K.epsilon()
-        y_output_1 = K.clip(y_output, epsilion, 1.0 - epsilion)
-        y_true_smooth = (1 - factor) * y_actual + (factor / 5.)
-        cross_entropy = -1 * y_true_smooth * K.log(y_output_1)
-        weight = alpha * y_true_smooth * np.power((1 - y_output_1), gamma)
-        loss = cross_entropy * weight
-        loss = K.sum(loss, axis=1)
-        return loss
-    return focal_loss
 
-def f1_score(y_actual, y_output):
-    def recall(y_actual, y_output):
-        y_pred_1 = K.one_hot(K.argmax(y_output, axis=1), num_classes=5)
-        true_positives = K.sum(y_actual * y_pred_1)
-        possible_positives = K.sum(y_actual)
-        recall = true_positives / possible_positives
-        return recall
-    def precision(y_actual, y_output):
-        y_pred_1 = K.one_hot(K.argmax(y_output, axis=1), num_classes=5)
-        true_positives = K.sum(y_actual * y_pred_1)
-        predicted_positives = K.sum(K.round(K.clip(y_pred_1, 0, 1)))
-        precision = true_positives / (predicted_positives + K.epsilon())
-        return precision
-
-    precision = precision(y_actual, y_output)
-    recall = recall(y_actual, y_output)
-    return 2 * ((precision * recall) / (precision + recall + K.epsilon()))
 
 
 train_datagen = ImageDataGenerator(
