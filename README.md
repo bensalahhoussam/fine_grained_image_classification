@@ -12,8 +12,7 @@ Bilinear CNN’s are simple parallel CNN’s which are combined using matrix out
 ## Problem Objectives:
 The aim of this challenge is to build a Generalised Model for the task of Image Classification. We have to also deal with Class Imbalance Problem and detect Fine Grained details.
 
-![Screenshot 2022-10-07 165357](https://user-images.githubusercontent.com/112108580/194596327-d1c7ae7d-02b8-4658-922e-7041401059ab.png)
-
+![Screenshot 2022-10-07 191437](https://user-images.githubusercontent.com/112108580/194623392-3f59fc02-498d-495c-9b70-f33971738561.png)
 ## Exprimenting with Loss Functions
 
 | model | score|
