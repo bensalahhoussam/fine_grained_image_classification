@@ -9,6 +9,7 @@ import numpy as np
 from tensorflow.keras.optimizers import Adam
 from mtcnn.mtcnn import MTCNN
 
+
 path_dataset="D://Deep_Learning_projects/new_projects/computer_vision/skin_dataset/"
 dataset_file = "D://skin_dataset/"
 
@@ -47,7 +48,6 @@ def data_preparation(file):
                 file_1 = path_dataset + "test" + "/" + class_name[i] + "/"
                 make_folder(file_1)
                 cv.imwrite(file_1 + "/" + "image_" + get_index(j) + str(j) + ".jpg", image)
-#data_preparation(dataset_file)
 
 def extract_face(image):
     detector=MTCNN()
@@ -78,20 +78,3 @@ def data_preprocessing(path):
             except:
                 pass
     return np.array(x_train),np.array(y_train)
-"""x_valid,y_valid=data_preprocessing("valid")
-print(x_valid.shape)
-print(y_valid.shape)"""
-
-"""np.savez("face_train.npz",x_train)
-np.savez("face_train_label.npz",y_train)"""
-
-"""np.savez("face_valid.npz",x_valid)
-np.savez("face_valid_label.npz",y_valid)"""
-
-
-def load_data(data_name):
-    npzfile=np.load("face_"+data_name+".npz")
-    train=npzfile["arr_0"]
-    npzfile = np.load("face_"+data_name+"_label.npz")
-    train_labels = npzfile["arr_0"]
-    return train,train_labels
