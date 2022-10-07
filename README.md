@@ -7,3 +7,5 @@ Bilinear CNN’s are simple parallel CNN’s which are combined using matrix out
 
 
 ![1_gr4snhggh9jV1F3mnHeErg](https://user-images.githubusercontent.com/112108580/194578146-f646b290-a318-4d84-abfe-ca3581194998.png)
+## References 
+Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889
