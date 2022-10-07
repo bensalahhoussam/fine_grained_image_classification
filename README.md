@@ -24,4 +24,4 @@ The aim of this challenge is to build a Generalised Model for the task of Image 
 | `ResNET-50 with Focal Loss + Label Smoothing` | 0.924|
 
 ## References 
-Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889                             https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06                                                                         https://github.com/aldi-dimara/keras-focal-loss 
+Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889                                      https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06                                                                                https://github.com/aldi-dimara/keras-focal-loss 
