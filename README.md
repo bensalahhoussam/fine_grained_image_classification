@@ -15,17 +15,15 @@ The aim of this challenge is to build a Generalised Model for the task of Image 
 ![Screenshot 2022-10-07 191437](https://user-images.githubusercontent.com/112108580/194623392-3f59fc02-498d-495c-9b70-f33971738561.png)
 ## Exprimenting with Loss Functions
 
-| model | score|
+| model(ResNET-50) | score|
 | --- | --- |
-| `ResNET-50 with Categorical Cross Entropy` | 0.8825 |
-| `ResNET-50 with Categorical Focal Loss` | 0.892 |
-| `ResNET-50 with Label Smoothing` | 0.915 |
-| `ResNET-50 with Focal Loss + Label Smoothing` | 0.924|
+| `Categorical Cross Entropy` | 0.8825 |
+| `Categorical Focal Loss` | 0.892 |
+| `Label Smoothing` | 0.915 |
+| `Focal Loss + Label Smoothing` | 0.924|
 
 ## References 
 Bilinear CNN Models for Fine-grained Visual Recognition- https://doi.org/10.48550/arXiv.1504.07889
-
 https://towardsdatascience.com/what-is-label-smoothing-108debd7ef06
-
 https://github.com/aldi-dimara/keras-focal-loss 
 
