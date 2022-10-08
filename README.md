@@ -17,8 +17,8 @@ The aim of this challenge is to build a Generalised Model for the task of Image 
 
 | model | score|
 | --- | --- |
-| `ResNET-50 with Cross Entropy` | 0.8825 |
-| `ResNET-50 with Focal Loss` | 0.892 |
+| `ResNET-50 with Categorical Cross Entropy` | 0.8825 |
+| `ResNET-50 with Categorical Focal Loss` | 0.892 |
 | `ResNET-50 with Label Smoothing` | 0.915 |
 | `ResNET-50 with Focal Loss + Label Smoothing` | 0.924|
 
